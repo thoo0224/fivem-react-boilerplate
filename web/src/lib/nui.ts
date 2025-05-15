@@ -29,7 +29,7 @@ export function debugEvent<T>(
    events: NuiAction<T> | NuiAction<T>[],
    delay: number = 1000,
 ) {
-   if (!isBrowser()) return;
+   // if (!isBrowser()) return;
 
    events = Array.isArray(events) ? events : [events];
    for (const event of events) {

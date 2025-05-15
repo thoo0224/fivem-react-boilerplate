@@ -106,12 +106,10 @@ export default function App() {
             </nav>
           </aside>
 
-          <p className="w-full">
-            <RouteContainer label={routes.find((r) => r.name == route)?.label ?? "Unknown"}>
-              {route == "invoices" && <InvoicesRoute invoices={invoices} />}
-              {route == "history" && <HistoryRoute />}
-            </RouteContainer>
-          </p>
+          <RouteContainer label={routes.find((r) => r.name == route)?.label ?? "Unknown"}>
+            {route == "invoices" && <InvoicesRoute invoices={invoices} />}
+            {route == "history" && <HistoryRoute />}
+          </RouteContainer>
         </main>
       </motion.div>
     </div>
